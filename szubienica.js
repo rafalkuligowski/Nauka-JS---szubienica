@@ -11,13 +11,10 @@ for (i=0; i<dlugosc; i++)
 	if (haslo.charAt(i)==" ") haslo1=haslo1 + " ";
 	else haslo1=haslo1 + "-";
 }
-
-
 function wypisz_haslo()
 {
 	document.getElementById("plansza").innerHTML=haslo1;
 }
-
 window.onload = start;
 
 var litery = new Array(35);
@@ -59,23 +56,18 @@ litery[33]="Ź";
 litery[34]="Ż";
 
 function start()
-{
-	
-	var tresc_diva="";
-	
+{	
+	var tresc_diva="";	
 	for (i=0; i<=34; i++)
 	{
-		var element = "lit" + i;
-		
+		var element = "lit" + i;		
 		tresc_diva = tresc_diva + '<div class="litera" onclick="sprawdz('+i+')" id="'+element+'">'+litery[i]+'</div>';
 		if ( (i+1) %7 == 0) tresc_diva = tresc_diva + '<div style="clear:both;"></div>'
-	}
-	
+	}	
 	
 	document.getElementById("alfabet").innerHTML=tresc_diva;
 	
-	wypisz_haslo();
-		
+	wypisz_haslo();		
 }
 
 String.prototype.ustawZnak = function(miejsce, znak)
@@ -85,8 +77,7 @@ String.prototype.ustawZnak = function(miejsce, znak)
 }
 
 function sprawdz(nr)
-{
-	
+{	
 	var trafiona=false;
 	
 	for (i=0; i<dlugosc; i++)
@@ -119,9 +110,7 @@ function sprawdz(nr)
 		//skucha
 		ile_skuch++;
 		var obraz = "img/s"+ile_skuch+".jpg";
-		document.getElementById("szubienica").innerHTML='<img src="'+obraz+'"alt="" />';
-		
-		
+		document.getElementById("szubienica").innerHTML='<img src="'+obraz+'"alt="" />';		
 	}
 	//wygrana
 	if (haslo==haslo1)
