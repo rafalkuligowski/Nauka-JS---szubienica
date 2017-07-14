@@ -4,7 +4,6 @@ body {
 	font-size:26px;	
     font-family: 'Inconsolata', monospace;
 	font-weight:700px;
-
 }
 #container {
 	width:900px;
@@ -42,7 +41,6 @@ body {
 	float:left;
 	cursor:pointer;
 	border-radius:10px;
-
 }
 .litera:hover
 {
@@ -56,8 +54,7 @@ body {
 	font-size:40px;
 }
 .reset:hover {
-	color:white;
-	
+	color:white;	
 }
 
 
